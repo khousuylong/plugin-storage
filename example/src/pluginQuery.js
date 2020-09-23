@@ -9,13 +9,15 @@ const PluginQuery = memo(props => {
       variables: { id: props.settingId}
     })
 
-    if(data) console.log('go the data', data)
-
-    return(
-      <div style={{padding: 10}} >
-          Measure distances and areas
-      </div>
-    )
+    if(data){
+      const setting = data.pluginSetting;
+      return( 
+        <div style={{padding: 10}} >
+          {Object.keys(setting).map(key =><div>{key}:{setting[key]}</div>)}
+        </div>
+      )
+    }
+    return null;
   }
 
   return (
