@@ -1,6 +1,6 @@
 import React, {memo} from 'react'
 import { ApolloProvider, useQuery } from '@apollo/client'
-import {PLUGIN_SETTING_QUERY} from 'search'
+import {PLUGIN_SETTING_QUERY, client} from 'search'
 
 const PluginQuery = memo(props => {
 
@@ -19,7 +19,7 @@ const PluginQuery = memo(props => {
   }
 
   return (
-    <ApolloProvider client={props.client}>
+    <ApolloProvider client={client}>
       <LoadSetting />  
     </ApolloProvider>
   );

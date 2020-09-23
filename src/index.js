@@ -1,5 +1,5 @@
 import {UPDATE_PLUGIN_SETTING_MUTATION, PLUGIN_SETTING_QUERY} from './pluginQuery'
-import Client from './client'
+import client from './client'
 
-export { UPDATE_PLUGIN_SETTING_MUTATION, PLUGIN_SETTING_QUERY, Client }
+export { UPDATE_PLUGIN_SETTING_MUTATION, PLUGIN_SETTING_QUERY, client }
 

@@ -9,5 +9,9 @@ const schema = makeExecutableSchema({
   resolvers
 })
 
-const Client = {}
-export default Client;
+const client = new ApolloClient({
+  link: new SchemaLink({ schema }),
+  cache: new InMemoryCache()
+});
+
+export default client;
