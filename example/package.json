@@ -9,7 +9,7 @@
     "test": "node ../node_modules/react-scripts/bin/react-scripts.js test",
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject",
     "json:server": "json-server --watch --host 0.0.0.0 --port 3006 data.json",
-		"start": "npm-run-all -p serve json:server"
+    "start": "npm-run-all -p serve json:server"
   },
   "dependencies": {
     "@material-ui/icons": "^4.9.1",

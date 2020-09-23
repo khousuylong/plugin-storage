@@ -1,30 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { ApolloClient, InMemoryCache } from '@apollo/client'
-import { withStyles } from '@material-ui/core/styles'
-import Divider from '@material-ui/core/Divider'
-import Button from '@material-ui/core/Button'
-import SettingsIcon from '@material-ui/icons/Settings'
 import { makeExecutableSchema } from 'graphql-tools'
+import { SchemaLink } from '@apollo/client/link/schema'
 import {typeDefs} from './schema/schema'
 import {resolvers} from './schema/resolvers'
-import { SchemaLink } from '@apollo/client/link/schema'
-import AppMap from './map'
-import SwipeableTemporaryDrawer from './drawer'
-import SettingDrawer from './settingDrawer'
-import 'search/dist/index.css'
+import PluginQuery from './pluginQuery' 
+
 
 const schema = makeExecutableSchema({
   typeDefs,
   resolvers
-});
-
-const styles = theme => ({
-  container: {
-    margin: 'auto',
-    maxWidth: '700px',
-    minWidth: '300px',
-    marginTop: '20px'
-  }
 });
 
 const client = new ApolloClient({
@@ -33,28 +18,13 @@ const client = new ApolloClient({
 });
 
 class App extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      openSetting: false
-    }
-  }
-
   render() {
     return(
       <React.Fragment>
-        <div style={{width: '100%', height: '100%', position: 'absolute'}}>
-          <AppMap client={client}/>  
-          <React.Fragment>
-            <SwipeableTemporaryDrawer client={client} />
-            <SettingDrawer client={client} open={this.state.openSetting} onClose={()=>this.setState({openSetting: false})} />
-          </React.Fragment>
-        </div>
-        <div onClick={()=> this.setState({openSetting: true}) } style={{position: 'absolute', bottom: 22, right: 10, zIndex: 999}}>
-          <Button variant="contained" style={{padding: 6, minWidth: 40}}><SettingsIcon /></Button>
-        </div>
+        <PluginQuery client={client} settingId="b67635cc-cb47-4aaf-b37b-42e470acfef3"/>
       </React.Fragment>
     ) 
   }
 }
-export default withStyles(styles)(App);
+export default App;
+
