@@ -7,7 +7,7 @@
 ## Install
 
 ```bash
-npm install --save search
+npm install --save plugin-storage
 ```
 
 ## Usage
