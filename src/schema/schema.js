@@ -25,7 +25,7 @@ const typeDefs = `
   type Mutation {
     updatePluginSetting(id: ID!, setting: String): PluginSetting
     createPluginStorage(input: PluginStorageInput): PluginStorage 
-    updatePluginStorage(input: PluginStorageInput): PluginStorage
+    updatePluginStorage(id: ID!, json: String): PluginStorage
   }
 
   schema {

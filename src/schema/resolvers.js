@@ -22,6 +22,12 @@ const resolvers = {
     createPluginStorage: async (root, args, context, info) => {
       const response = await axios.post(`${server}/pluginStorages`, args.input, { headers: {"Content-Type": "application/json"}});
       return response.data;
+    },
+    updatePluginStorage: async (root, args, context, info) => {
+      console.log('hay yeah', args)
+      const pluginStorage = (await axios.get(`${server}/pluginStorages/${args.id}`)).data;
+      pluginStorage['json'] = args.json;
+      return (await axios.put(`${server}/pluginStorages/${args.id}`, pluginStorage, { headers: {"Content-Type": "application/json"}})).data;
     }
   }
 };
