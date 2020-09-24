@@ -25,5 +25,22 @@
       "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
       "setting": "{\"metrix\":\"metric\"}"
     }
+  ],
+  "pluginStorages": [
+    {
+      "id": "4a4af-b137b-22acfef3",
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": ""
+    },
+    {
+      "id": "8cab3641-f2a5-4734-aef5-62f51a5e7eab",
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "empty json"
+    },
+    {
+      "id": "b757cde9-63b6-4046-98d3-4e8c985633af",
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "empty json"
+    }
   ]
 }

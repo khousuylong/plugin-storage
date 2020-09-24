@@ -1,5 +1,25 @@
 import gql from 'graphql-tag';
 
+const CREATE_PLUGIN_STORAGE_MUTATION = gql`
+  mutation($input: PluginStorageInput){
+    createPluginStorage(input: $input){
+      id
+      pluginId
+      json
+    }
+  }
+`
+
+const PLUGIN_STORAGE_QUERY = gql`
+  query PluginStorageQuery($id: ID!) {
+    pluginStorage(id: $id) {
+      id
+      pluginId
+      json
+    }
+  }
+`
+
 const PLUGIN_SETTING_QUERY = gql`
   query PluginSettingQuery($id: ID!) {
     pluginSetting(id: $id) {
@@ -20,4 +40,4 @@ const UPDATE_PLUGIN_SETTING_MUTATION = gql`
   }
 `
 
-export {UPDATE_PLUGIN_SETTING_MUTATION, PLUGIN_SETTING_QUERY}
+export {UPDATE_PLUGIN_SETTING_MUTATION, PLUGIN_SETTING_QUERY, PLUGIN_STORAGE_QUERY, CREATE_PLUGIN_STORAGE_MUTATION}
