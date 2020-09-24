@@ -4,7 +4,8 @@ import {
   CREATE_PLUGIN_STORAGE_MUTATION, 
   client, 
   PLUGIN_STORAGE_QUERY,
-  UPDATE_PLUGIN_STORAGE_MUTATION
+  UPDATE_PLUGIN_STORAGE_MUTATION,
+  DELETE_PLUGIN_STORAGE_MUTATION
 } from 'search'
 import { v4 as uuidv4 } from 'uuid';
 
@@ -47,12 +48,31 @@ const PluginMutation = memo(props => {
       </div>
     )
   }
+
+  const DeleteStorage = () => {
+    const [deleteStorage, {data}] = useMutation(DELETE_PLUGIN_STORAGE_MUTATION);
+    if(data){
+      setState({storage: null})
+    }
+
+    return(
+      <div style={{paddingTop: 10}}>
+        <button onClick={() => {
+        deleteStorage({variables: { id: state.storage.id }})
+      }}>Delete storage</button>
+      </div>
+    )
+  }
+
   return (
     <ApolloProvider client={client}>
       <Storage />
       {
         state.storage ? 
-        <UpdateStorage />
+        <React.Fragment>
+          <UpdateStorage />
+          <DeleteStorage />
+        </React.Fragment>
         : null
       }
     </ApolloProvider>

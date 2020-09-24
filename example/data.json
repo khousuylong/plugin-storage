@@ -61,6 +61,36 @@
       "id": "9bf7954d-22ca-42b8-8318-4cf1c04fdaae",
       "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
       "json": "{\"foo\":\"bar\"}"
+    },
+    {
+      "id": "c3e277a9-fbcc-45ab-a2a9-be2ccaf187d6",
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "{\"foo\":\"foo\"}"
+    },
+    {
+      "id": "14a97665-18b0-4326-863e-a8b93164a5f2",
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "{\"foo\":\"foo\"}"
+    },
+    {
+      "id": "b11a80d4-12c0-4443-8446-fb482678364f",
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "{\"foo\":\"foo\"}"
+    },
+    {
+      "id": "7ddf5300-108a-4306-8415-7fe6c4d26f99",
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "{\"foo\":\"foo\"}"
+    },
+    {
+      "id": "9be6d6cc-1ddc-4da8-b0de-e43aa1aa714f",
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "{\"foo\":\"bar\"}"
+    },
+    {
+      "id": "ff1a7d8c-94bb-467c-a286-344c2f68544a",
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "{\"foo\":\"foo\"}"
     }
   ]
 }

@@ -26,6 +26,7 @@ const typeDefs = `
     updatePluginSetting(id: ID!, setting: String): PluginSetting
     createPluginStorage(input: PluginStorageInput): PluginStorage 
     updatePluginStorage(id: ID!, json: String): PluginStorage
+    deletePluginStorage(id: ID!): PluginStorage
   }
 
   schema {

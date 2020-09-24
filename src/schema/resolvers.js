@@ -28,6 +28,12 @@ const resolvers = {
       const pluginStorage = (await axios.get(`${server}/pluginStorages/${args.id}`)).data;
       pluginStorage['json'] = args.json;
       return (await axios.put(`${server}/pluginStorages/${args.id}`, pluginStorage, { headers: {"Content-Type": "application/json"}})).data;
+    },
+    deletePluginStorage: async (root, args, context, info) => {
+      const pluginStorage = (await axios.get(`${server}/pluginStorages/${args.id}`)).data;
+      await axios.delete(`${server}/pluginStorages/${args.id}`);
+      console.log('yeah deleted')
+      return pluginStorage 
     }
   }
 };
