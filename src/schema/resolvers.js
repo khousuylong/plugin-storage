@@ -11,6 +11,10 @@ const resolvers = {
       pluginStorage: async (root, args, context, info) => {
         const storage = (await axios.get(`${server}/pluginStorages/${args.id}`)).data;
         return storage
+      },
+      pluginStorages: async(root, args, context, info) => {
+        const pluginStorages = (await axios.get(`${server}/pluginStorages?pluginId=${args.pluginId}`)).data;
+        return pluginStorages;
       }
   },
   Mutation: {
@@ -24,7 +28,6 @@ const resolvers = {
       return response.data;
     },
     updatePluginStorage: async (root, args, context, info) => {
-      console.log('hay yeah', args)
       const pluginStorage = (await axios.get(`${server}/pluginStorages/${args.id}`)).data;
       pluginStorage['json'] = args.json;
       return (await axios.put(`${server}/pluginStorages/${args.id}`, pluginStorage, { headers: {"Content-Type": "application/json"}})).data;

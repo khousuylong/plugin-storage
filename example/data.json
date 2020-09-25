@@ -91,6 +91,11 @@
       "id": "ff1a7d8c-94bb-467c-a286-344c2f68544a",
       "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
       "json": "{\"foo\":\"foo\"}"
+    },
+    {
+      "id": "dc99fe7c-8b3b-4c60-bfbf-f4bcfdb7cbb2",
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "{\"foo\":\"foo\"}"
     }
   ]
 }

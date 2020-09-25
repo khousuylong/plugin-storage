@@ -20,6 +20,7 @@ const typeDefs = `
   type Query{
     pluginSetting(id: ID!): PluginSetting
     pluginStorage(id: ID!): PluginStorage
+    pluginStorages(pluginId: ID!): [PluginStorage] 
   }
 
   type Mutation {

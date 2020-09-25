@@ -26,6 +26,15 @@ const DELETE_PLUGIN_STORAGE_MUTATION = gql`
   }
 `;
 
+const PLUGIN_STORAGES_QUERY = gql`
+  query PluginStoragesQuery($pluginId: ID!) {
+    pluginStorages(pluginId: $pluginId) {
+      id
+      pluginId
+      json
+    }
+  }
+`; 
 const PLUGIN_STORAGE_QUERY = gql`
   query PluginStorageQuery($id: ID!) {
     pluginStorage(id: $id) {
@@ -62,5 +71,6 @@ export {
   PLUGIN_STORAGE_QUERY, 
   CREATE_PLUGIN_STORAGE_MUTATION, 
   UPDATE_PLUGIN_STORAGE_MUTATION,
-  DELETE_PLUGIN_STORAGE_MUTATION
+  DELETE_PLUGIN_STORAGE_MUTATION,
+  PLUGIN_STORAGES_QUERY
 }
