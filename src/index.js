@@ -8,8 +8,6 @@ import {
   DELETE_PLUGIN_STORAGE_MUTATION
 } from './pluginQuery'
 
-import {openPluginStorage} from './cache'
-
 import client from './client'
 
 export {
@@ -20,7 +18,6 @@ export {
   CREATE_PLUGIN_STORAGE_MUTATION, 
   UPDATE_PLUGIN_STORAGE_MUTATION,
   DELETE_PLUGIN_STORAGE_MUTATION,
-  openPluginStorage,
   client 
 }
 
