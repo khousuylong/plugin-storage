@@ -44,6 +44,7 @@ const PluginQuery = memo(props => {
     })
 
     if(data){
+      console.log('my storage', data)
       return(
         <div>
           {
@@ -51,7 +52,6 @@ const PluginQuery = memo(props => {
           }
         </div>
       )
-      console.log('hey hey this is data', data)
     }
     return null;
   }
