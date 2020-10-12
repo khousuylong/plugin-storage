@@ -32,7 +32,6 @@ const PLUGIN_STORAGES_QUERY = gql`
       id
       pluginId
       json
-      open @client
     }
   }
 `; 
