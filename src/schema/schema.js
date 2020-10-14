@@ -12,7 +12,6 @@ const typeDefs = `
   }
 
   input PluginStorageInput{
-    id: ID!
     pluginId: ID!
     json: String
   }

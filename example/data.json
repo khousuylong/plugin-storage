@@ -31,6 +31,31 @@
       "id": "afbfda05-b357-492d-b364-8094af308836",
       "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
       "json": "{\"foo\":\"new bar\"}"
+    },
+    {
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "{\"foo\":\"foo\"}",
+      "id": "w6sbErL"
+    },
+    {
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "{\"foo\":\"foo\"}",
+      "id": "zEf810M"
+    },
+    {
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "{\"foo\":\"foo\"}",
+      "id": "yX8XnCq"
+    },
+    {
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "{\"foo\":\"foo\"}",
+      "id": "OOG4a59"
+    },
+    {
+      "pluginId": "869a172a-1026-458d-8c6b-89590d16b5d5",
+      "json": "{\"foo\":\"new bar\"}",
+      "id": "cXVnjUq"
     }
   ]
 }

@@ -8,9 +8,6 @@ import {
   PLUGIN_STORAGES_QUERY,
   DELETE_PLUGIN_STORAGE_MUTATION
 } from 'search'
-import { v4 as uuidv4 } from 'uuid';
-
-const storageId = uuidv4();
 
 const PluginMutation = memo(props => {
 
@@ -39,7 +36,7 @@ const PluginMutation = memo(props => {
 
     return(
       <button onClick={() => {
-        createStorage({variables: { input: {id: storageId, pluginId: '869a172a-1026-458d-8c6b-89590d16b5d5', json: JSON.stringify({foo: 'foo'}) }}})
+        createStorage({variables: { input: {pluginId: '869a172a-1026-458d-8c6b-89590d16b5d5', json: JSON.stringify({foo: 'foo'}) }}})
       }}>Create storage</button>
     ) 
   }
@@ -57,7 +54,7 @@ const PluginMutation = memo(props => {
           {Object.keys(storage).map(key =><div key={key}>{key}:{storage[key]}</div>)}
         </div>
         <button onClick={() => {
-          updateStorage({variables: { id: storageId, open: true, json: JSON.stringify({foo: 'new bar'}) }})
+          updateStorage({variables: { id: storage.id, open: true, json: JSON.stringify({foo: 'new bar'}) }})
       }}>Update storage</button>
       </div>
     )
