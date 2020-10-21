@@ -1,4 +1,4 @@
-import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { ApolloClient } from '@apollo/client'
 import { makeExecutableSchema } from 'graphql-tools'
 import { SchemaLink } from '@apollo/client/link/schema'
 import {typeDefs} from './schema/schema'

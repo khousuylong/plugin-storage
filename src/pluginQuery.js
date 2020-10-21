@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import {gql} from '@apollo/client'
 
 const CREATE_PLUGIN_STORAGE_MUTATION = gql`
   mutation($input: PluginStorageInput){
@@ -24,7 +24,7 @@ const DELETE_PLUGIN_STORAGE_MUTATION = gql`
       id
     }
   }
-`;
+`
 
 const PLUGIN_STORAGES_QUERY = gql`
   query PluginStoragesQuery($pluginId: ID!) {
@@ -34,7 +34,7 @@ const PLUGIN_STORAGES_QUERY = gql`
       json
     }
   }
-`; 
+` 
 const PLUGIN_STORAGE_QUERY = gql`
   query PluginStorageQuery($id: ID!) {
     pluginStorage(id: $id) {
